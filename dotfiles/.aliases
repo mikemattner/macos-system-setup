@@ -78,3 +78,4 @@ alias spoton="sudo mdutil -a -i on"
 
 #Git commands
 alias gbn="git checkout -b"
+alias gmsg="git commit -m"
