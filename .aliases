@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#test comment
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
