@@ -8,6 +8,8 @@ function doIt() {
     rsync --exclude ".git/" \
         --exclude ".DS_Store" \
         --exclude "bootstrap.sh" \
+        --exclude "homebrew.sh" \
+        --exclude "settings/" \
         --exclude "README.md" \
         -avh --no-perms . ~;
     source ~/.zshrc;
