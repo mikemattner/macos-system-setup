@@ -4,7 +4,6 @@ My system setup in most circumstances
 ## Prerequisites
 * [Install Xcode Tools](http://railsapps.github.io/xcode-command-line-tools.html)
 * [Install Node.js](https://nodejs.org/en/)
-* [Install Homebrew](https://brew.sh/)
 * [Install Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
 ## Also, don't forget about
