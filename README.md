@@ -4,7 +4,6 @@ My system setup in most circumstances
 ## Prerequisites
 * [Install Xcode Tools](http://railsapps.github.io/xcode-command-line-tools.html)
 * [Install Node.js](https://nodejs.org/en/)
-* [Install Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
 ## Also, don't forget about
 * [Bartender, so I can remove those pesky icons](https://www.macbartender.com/)
@@ -12,10 +11,10 @@ My system setup in most circumstances
 * [Pliim, for distration free presentations](https://zehfernandes.github.io/pliim/)
 
 ## Installation
-`source boostrap.sh`
+Navigate to your repo in terminal and type `source boostrap.sh` which should automatically run you through the setup.
 
 ## Credits
-Thanks to [Mathias](https://github.com/mathiasbynens/dotfiles) and his sensible defaults. 
+Thanks to [Mathias](https://github.com/mathiasbynens/dotfiles) and his sensible defaults, as well as the [article](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789) by Lars Kappert for bringing this all to my attention. Also checkout [GitHub does dotfiles](https://dotfiles.github.io/).
 
-My setup is pretty light in comparison. You won't find a lot of value here.
+My setup is pretty light in comparison to most of these, but if you find any value here feel free to modify for your needs.
 

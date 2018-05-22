@@ -4,7 +4,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
-function doIt() {
+function copyDotFiles() {
     rsync --exclude ".git/" \
         --exclude ".DS_Store" \
         --exclude "bootstrap.sh" \
@@ -29,6 +29,6 @@ unset installBrews;
 echo -n "Want to install some dotfiles? (y/n) "
 read REPLY
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    doIt;
+    copyDotFiles;
 fi;
-unset doIt;
+unset copyDotFiles;

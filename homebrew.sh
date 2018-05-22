@@ -15,12 +15,13 @@ else
 fi;
 
 # Useful utilities
+brew install cask
 brew install tree
 brew install postgres
 brew install redis
 
 # Oh My ZSH
-echo -n "Need Oh My Zsh (y/n) "
+echo -n "Need Oh My Zsh? (y/n) "
 read REPLY
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
