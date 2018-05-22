@@ -18,6 +18,7 @@ fi;
 brew tap caskroom/cask
 brew install cask
 brew install tree
+brew install zsh-syntax-highlighting
 
 # Oh My ZSH
 echo -n "Need Oh My Zsh? (y/n) "
