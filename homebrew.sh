@@ -15,10 +15,9 @@ else
 fi;
 
 # Useful utilities
+brew tap caskroom/cask
 brew install cask
 brew install tree
-brew install postgres
-brew install redis
 
 # Oh My ZSH
 echo -n "Need Oh My Zsh? (y/n) "
