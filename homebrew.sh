@@ -20,13 +20,6 @@ brew install cask
 brew install tree
 brew install zsh-syntax-highlighting
 
-# Oh My ZSH
-echo -n "Need Oh My Zsh? (y/n) "
-read REPLY
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi;
-
 # Install iTerm2
 echo -n "Need iTerm2? (y/n) "
 read REPLY
