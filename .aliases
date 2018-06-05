@@ -77,6 +77,10 @@ alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
 alias spoton="sudo mdutil -a -i on"
 
-#Git commands
+# Git commands
 alias gnb="git checkout -b"
 alias gmsg="git commit -m"
+
+# Postgres server commands
+alias pgstart="pg_ctl -D /usr/local/var/postgres/ start"
+alias pgstopp="pg_ctl -D /usr/local/var/postgres/ stop"
