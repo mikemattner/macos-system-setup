@@ -23,3 +23,10 @@ function o() {
 function docksize() {
     defaults write com.apple.dock tilesize -integer "$1"; killall Dock
 }
+
+# Add/commit/push with message - LAZY
+function gcommit() {
+    git add .
+    git commit -m "$1"
+    git push
+}
