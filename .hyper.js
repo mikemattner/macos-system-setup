@@ -4,6 +4,9 @@
 
 module.exports = {
   config: {
+    //To receive updates
+    updateChannel: 'stable',
+
     // default font size in pixels for all tabs
     fontSize: 14,
 
@@ -17,7 +20,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to true for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -44,7 +47,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '30px 30px',
+    padding: '40px 40px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -71,7 +74,8 @@ module.exports = {
     hyperTabs: {
         tabIcons: true,
         tabIconsColored: true,
-        trafficButtons: true
+        trafficButtons: true,
+        activityColor: 'salmon',
     },
 
     materialBox: {
@@ -84,6 +88,11 @@ module.exports = {
         accentColor : '#528bff',
         borderColor : '#343D4C',
       },
+    },
+
+    hyperStatusLine: {
+        dirtyColor: 'salmon',
+        aheadColor: 'ivory',
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -127,6 +136,9 @@ module.exports = {
     'hyper-material-box',
     'hyper-tabs-enhanced',
     'hyper-dark-scrollbar',
+    "hyper-search",
+    "hyper-pane",
+    "hyper-highlight-active-pane"
   ],
 
   // in development, you can create a directory under
