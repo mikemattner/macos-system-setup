@@ -11,7 +11,7 @@ My system setup in most circumstances
 * [Pliim, for distration free presentations](https://zehfernandes.github.io/pliim/)
 
 ## Installation
-Navigate to your repo in terminal and type `source boostrap.sh` which should automatically run you through the setup.
+Navigate to your repo in terminal and type `source bootstrap.sh` which should automatically run you through the setup.
 
 ## Credits
 Thanks to [Mathias](https://github.com/mathiasbynens/dotfiles) and his sensible defaults, as well as the [article](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789) by Lars Kappert for bringing this all to my attention. Also checkout [GitHub does dotfiles](https://dotfiles.github.io/).
