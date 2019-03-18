@@ -19,6 +19,7 @@ brew tap caskroom/cask
 brew install cask
 brew install tree
 brew install zsh-syntax-highlighting
+brew install yarn
 
 # Install iTerm2
 echo -n "Need iTerm2? (y/n) "
