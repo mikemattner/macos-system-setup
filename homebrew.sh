@@ -21,6 +21,13 @@ brew install tree
 brew install zsh-syntax-highlighting
 brew install yarn
 
+# Install VS Code
+echo -n "Need Visual Studio Code? (y/n) "
+read REPLY
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    brew cask install visual-studio-code
+fi;
+
 # Install iTerm2
 echo -n "Need iTerm2? (y/n) "
 read REPLY
