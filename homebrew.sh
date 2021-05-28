@@ -21,6 +21,9 @@ brew install tree
 brew install zsh-syntax-highlighting
 brew install yarn
 
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+
 # Install VS Code
 echo -n "Need Visual Studio Code? (y/n) "
 read REPLY
