@@ -5,7 +5,7 @@
 echo -n "Need to install Homebrew? (y/n) "
 read REPLY
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     # Make sure we’re using the latest Homebrew.
     brew update
@@ -15,11 +15,11 @@ else
 fi;
 
 # Useful utilities
-brew tap caskroom/cask
+brew tap homebrew/cask
 brew install cask
 brew install tree
-brew install zsh-syntax-highlighting
-brew install yarn
+# brew install zsh-syntax-highlighting
+# brew install yarn
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
