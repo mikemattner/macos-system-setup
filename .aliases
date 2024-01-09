@@ -83,6 +83,7 @@ alias spoton="sudo mdutil -a -i on"
 # Git commands
 alias gnb="git checkout -b"
 alias gmsg="git commit -m"
+alias glog="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all"
 
 # Postgres server commands
 alias pgstart="pg_ctl -D /usr/local/var/postgres/ start"
