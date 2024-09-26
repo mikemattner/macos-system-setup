@@ -38,12 +38,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     brew cask install iterm2
 fi;
 
-#Install Hyper.js
-echo -n "Need Hyper.js? (y/n) "
-read REPLY
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    brew cask install hyper
-fi;
-
 # Remove outdated versions from the cellar.
 brew cleanup
