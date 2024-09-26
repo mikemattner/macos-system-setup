@@ -88,3 +88,7 @@ alias glog="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold 
 # Postgres server commands
 alias pgstart="pg_ctl -D /usr/local/var/postgres/ start"
 alias pgstopp="pg_ctl -D /usr/local/var/postgres/ stop"
+
+# Game Mode On/Off
+alias gameon="/Applications/Xcode.app/Contents/Developer/usr/bin/gamepolicyctl game-mode set on"
+alias gameoff="/Applications/Xcode.app/Contents/Developer/usr/bin/gamepolicyctl game-mode set auto"
