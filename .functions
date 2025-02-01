@@ -40,3 +40,13 @@ function gcommit() {
     git commit -m "$1"
     git push
 }
+
+function gitClean() {
+    if [ $# -eq 0 ]; then
+        echo "Cleaning all branches except main..."
+        git branch | grep -v "main" | xargs git branch -D
+    else
+        echo "Cleaning all branches except $@..."
+        git branch | grep -v "$@" | xargs git branch -D
+    fi
+}
