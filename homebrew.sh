@@ -24,6 +24,9 @@ brew install tree
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 
+# Install alt-tab
+brew install --cask alt-tab
+
 # Install VS Code
 echo -n "Need Visual Studio Code? (y/n) "
 read REPLY
