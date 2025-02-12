@@ -30,6 +30,12 @@ brew install --cask alt-tab
 # Install FastFetch
 brew install fastfetch
 
+# Install Zoxide
+brew install zoxide
+
+# Install fzf
+brew install fzf
+
 # Install VS Code
 echo -n "Need Visual Studio Code? (y/n) "
 read REPLY
