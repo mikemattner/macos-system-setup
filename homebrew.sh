@@ -18,14 +18,16 @@ fi;
 brew tap homebrew/cask
 brew install cask
 brew install tree
-# brew install zsh-syntax-highlighting
-# brew install yarn
-
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
+brew install --cask font-jetbrains-mono
+brew install --cask font-hack-nerd-font
 
 # Install alt-tab
 brew install --cask alt-tab
+
+# Install FastFetch
+brew install fastfetch
 
 # Install VS Code
 echo -n "Need Visual Studio Code? (y/n) "
