@@ -92,3 +92,6 @@ alias pgstopp="pg_ctl -D /usr/local/var/postgres/ stop"
 # Game Mode On/Off
 alias gameon="/Applications/Xcode.app/Contents/Developer/usr/bin/gamepolicyctl game-mode set on"
 alias gameoff="/Applications/Xcode.app/Contents/Developer/usr/bin/gamepolicyctl game-mode set auto"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'

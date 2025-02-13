@@ -4,49 +4,17 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
-function copyDotFiles() {
-    rsync --exclude ".git/" \
-        --exclude ".DS_Store" \
-        --exclude "bootstrap.sh" \
-        --exclude "homebrew.sh" \
-        --exclude "settings/" \
-        --exclude "README.md" \
-        -avh --no-perms . ~;
-    source ~/.zshrc;
-}
+# Install Command Line Tools
+source commandlinetools.sh;
 
-function installBrews() {
-    source homebrew.sh;
-}
+# Install Oh My ZSH
+source ohmyzsh.sh;
 
-function copyThemes() {
-    cp -r -i omz-themes/ ~/.oh-my-zsh/custom/themes/;
-}
+# Install Homebrew
+source homebrew.sh;
 
-# Oh My ZSH
-echo -n "Install Oh My Zsh? (y/n) "
-read REPLY
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi;
+# Copy Dotfiles
+source dotfiles.sh;
 
-echo -n "Need some brew? (y/n) "
-read REPLY
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    installBrews;
-fi;
-unset installBrews;
-
-echo -n "Want to copy some dotfiles? (y/n) "
-read REPLY
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    copyDotFiles;
-fi;
-unset copyDotFiles;
-
-echo -n "Want to copy some themes? (y/n) "
-read REPLY
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    copyThemes;
-fi;
-unset copyThemes;
+# Load Custom OhMyZSH themes
+source themes.sh;
