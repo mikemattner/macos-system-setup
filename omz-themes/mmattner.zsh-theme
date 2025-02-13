@@ -13,9 +13,9 @@ silver=$fg[silver]
 RESET=$reset_color
 
 if [ "$USERNAME" = "root" ]; then
-    PROMPTPREFIX="%{$R%}%B§⚠%{$RESET%}%{$B%}%{$RESET%} ";
+    PROMPTPREFIX="%{$R%}%B§⚠%{$RESET%} ";
 else
-    PROMPTPREFIX="%B§%{$RESET%} %{$B%}%{$RESET%} ";
+    PROMPTPREFIX="%B§%{$RESET%} ";
 fi
 
 local return_code="%(?..%{$R%}%? ↵%{$RESET%})"
