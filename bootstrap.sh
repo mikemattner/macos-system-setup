@@ -19,6 +19,10 @@ function installBrews() {
     source homebrew.sh;
 }
 
+function copyThemes() {
+    cp -r -i cmz-themes/ ~/.oh-my-zsh/custom/themes/;
+}
+
 # Oh My ZSH
 echo -n "Install Oh My Zsh? (y/n) "
 read REPLY
