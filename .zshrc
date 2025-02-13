@@ -10,7 +10,8 @@ export ZSH=/Users/mikemattner/.oh-my-zsh
 # ZSH_THEME="agnoster"
 # ZSH_THEME="blinks"
 # ZSH_THEME="sunrise"
-ZSH_THEME="mmattner"
+# ZSH_THEME="mmattner"
+ZSH_THEME="mmattnermulti"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

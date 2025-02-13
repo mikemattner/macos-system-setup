@@ -13,9 +13,9 @@ silver=$fg[silver]
 RESET=$reset_color
 
 if [ "$USERNAME" = "root" ]; then
-    PROMPTPREFIX="%{$R%}%B§⚠%{$RESET%}%{$B%}%{$RESET%} ";
+    PROMPTPREFIX="%{$R%}%B⚠%{$RESET%}%{$B%}◯ %n%{$RESET%} ";
 else
-    PROMPTPREFIX="%B§%{$RESET%} %{$B%}%{$RESET%} ";
+    PROMPTPREFIX="%B[%w @%@]%{$RESET%} %{$B%}◯ %n%{$RESET%} ";
 fi
 
 local return_code="%(?..%{$R%}%? ↵%{$RESET%})"
@@ -66,11 +66,12 @@ custom_git_prompt_status() {
 # $(git_prompt_short_sha) - (optional) short sha of the current commit e.g. (6ef6a66)
 function custom_git_prompt() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$(git_prompt_ahead)$(custom_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(git_prompt_short_sha)|${ref#refs/heads/}$(parse_git_dirty)$(git_prompt_ahead)$(custom_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 # %B sets bold text
-PROMPT='$PROMPTPREFIX%B%2~ $(custom_git_prompt)%B❯%{$RESET%} '
+PROMPT='%B╭─%b $PROMPTPREFIX%B§ %2~ $(custom_git_prompt)
+%B╰─ ❯%{$RESET%} '
 RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$RESET%}%{$Y%} ❪"
@@ -95,5 +96,5 @@ ZSH_THEME_GIT_PROMPT_MODIFIED="%{$R%}M"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$R%}D"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$R%}UU"
 
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE="("
-ZSH_THEME_GIT_PROMPT_SHA_AFTER=")"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=""
+ZSH_THEME_GIT_PROMPT_SHA_AFTER=""
