@@ -15,7 +15,7 @@ RESET=$reset_color
 if [ "$USERNAME" = "root" ]; then
     PROMPTPREFIX="%{$R%}%B⚠%{$RESET%}%{$B%}◯ %n%{$RESET%} ";
 else
-    PROMPTPREFIX="%B%F{120}[%w @%@]%f%{$RESET%} %F{170}◯ %n%f%{$RESET%} ";
+    PROMPTPREFIX="%B%F{120}◯ %n%f%{$RESET%} ";
 fi
 
 local return_code="%(?..%{$R%}%? ↵%{$RESET%})"
