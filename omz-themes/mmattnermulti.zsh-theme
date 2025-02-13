@@ -66,7 +66,7 @@ custom_git_prompt_status() {
 # $(git_prompt_short_sha) - (optional) short sha of the current commit e.g. (6ef6a66)
 function custom_git_prompt() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(git_prompt_short_sha)|${ref#refs/heads/}$(parse_git_dirty)$(git_prompt_ahead)$(custom_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$(git_prompt_ahead)$(custom_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 # %B sets bold text
@@ -74,8 +74,8 @@ PROMPT='%B╭─%b $PROMPTPREFIX%B§ %2~ $(custom_git_prompt)
 %B╰─ ❯%{$RESET%} '
 RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$RESET%}%{$Y%} ❪"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$Y%}❫%{$RESET%} "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$RESET%}%{$Y%} ❮"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$Y%}❯%{$RESET%} "
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$R%}⚡"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
