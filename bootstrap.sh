@@ -20,7 +20,7 @@ function installBrews() {
 }
 
 function copyThemes() {
-    cp -r -i cmz-themes/ ~/.oh-my-zsh/custom/themes/;
+    cp -r -i omz-themes/ ~/.oh-my-zsh/custom/themes/;
 }
 
 # Oh My ZSH
@@ -43,3 +43,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     copyDotFiles;
 fi;
 unset copyDotFiles;
+
+echo -n "Want to copy some themes? (y/n) "
+read REPLY
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    copyThemes;
+fi;
+unset copyThemes;
