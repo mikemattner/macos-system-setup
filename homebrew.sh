@@ -36,6 +36,9 @@ brew install zoxide
 # Install fzf
 brew install fzf
 
+# Install skhd
+brew install koekeishiya/formulae/skhd
+
 # Install VS Code
 echo -n "Need Visual Studio Code? (y/n) "
 read REPLY
