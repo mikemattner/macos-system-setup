@@ -9,15 +9,16 @@ Y=$fg_no_bold[yellow]
 B=$fg_no_bold[blue]
 C=$fg[cyan]
 red=$fg[red]
+silver=$fg[silver]
 RESET=$reset_color
 
 if [ "$USERNAME" = "root" ]; then
-    PROMPTPREFIX="%{$R%}%B§%{$RESET%}%n ";
+    PROMPTPREFIX="%{$R%}%B§%{$RESET%}%{$B%}(%n)%{$RESET%} ";
 else
-    PROMPTPREFIX="%B§%{$RESET%} ";
+    PROMPTPREFIX="%B§%{$RESET%} %{$B%}(%n)%{$RESET%} ";
 fi
 
-local return_code="%(?..%{$R%}%? ↵%{$RESET%})"
+local return_code="%(?.%B%@%{$RESET%}.%{$R%}%? ↵%{$RESET%})"
 
 # Get the status of the working tree (copied and modified from git.zsh)
 custom_git_prompt_status() {
@@ -69,7 +70,7 @@ function custom_git_prompt() {
 
 # %B sets bold text
 PROMPT='$PROMPTPREFIX%B%2~ $(custom_git_prompt)%B❯%{$RESET%} '
-RPS1=" %B%w @ %t%{$reset_color%}%{$return_code%}"
+RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$RESET%}%{$Y%} ["
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$Y%}]%{$RESET%} "
