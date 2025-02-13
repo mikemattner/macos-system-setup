@@ -63,6 +63,7 @@ custom_git_prompt_status() {
 }
 
 # get the name of the branch we are on (copied and modified from git.zsh)
+# $(git_prompt_short_sha) - (optional) short sha of the current commit e.g. (6ef6a66)
 function custom_git_prompt() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$(git_prompt_ahead)$(custom_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
@@ -72,8 +73,8 @@ function custom_git_prompt() {
 PROMPT='$PROMPTPREFIX%B%2~ $(custom_git_prompt)%B❯%{$RESET%} '
 RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$RESET%}%{$Y%} ❲"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$Y%}❳%{$RESET%} "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$RESET%}%{$Y%} ["
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$Y%}]%{$RESET%} "
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$R%}⚡"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
@@ -94,3 +95,6 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$R%}?"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$R%}M"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$R%}D"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$R%}UU"
+
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE="("
+ZSH_THEME_GIT_PROMPT_SHA_AFTER=")"
