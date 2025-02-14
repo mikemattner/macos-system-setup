@@ -1,3 +1,4 @@
 # opens iTerm2
-alt - return : open -a 'iTerm'
+cmd + alt - return : open -a 'iTerm'
+cmd + alt - m : open -a 'Sublime Merge'
 fn + alt - s : open -a 'Steam'

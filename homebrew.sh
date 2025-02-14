@@ -61,27 +61,6 @@ function installBrews() {
         brew install --cask raycast
     fi;
 
-    # Install Bartender
-    echo -n "Need Bartender? (y/n) "
-    read REPLY
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        brew install --cask bartender
-    fi;
-
-    # Install VS Code
-    echo -n "Need Visual Studio Code? (y/n) "
-    read REPLY
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        brew cask install visual-studio-code
-    fi;
-
-    # Install iTerm2
-    echo -n "Need iTerm2? (y/n) "
-    read REPLY
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        brew cask install iterm2
-    fi;
-
     # Remove outdated versions from the cellar.
     brew cleanup
 }
