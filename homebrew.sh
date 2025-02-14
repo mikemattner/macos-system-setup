@@ -47,13 +47,6 @@ function installBrews() {
         brew install --cask alt-tab
     fi;
 
-    # Install Applite
-    echo -n "Need Applite? (y/n) "
-    read REPLY
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        brew install --cask applite
-    fi;
-
     # Install Raycast
     echo -n "Need Raycast? (y/n) "
     read REPLY
