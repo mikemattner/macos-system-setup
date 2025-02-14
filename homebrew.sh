@@ -19,8 +19,11 @@ function installBrews() {
     brew tap homebrew/cask
     brew install cask
     brew install tree
+
+    # Install fonts
     brew tap homebrew/cask-fonts
     brew install --cask font-fira-code
+    brew install --cask font-fira-code-nerd-font
     brew install --cask font-jetbrains-mono
     brew install --cask font-hack-nerd-font
     brew install --cask font-jetbrains-mono-nerd-font
@@ -39,6 +42,27 @@ function installBrews() {
 
     # Install skhd
     brew install koekeishiya/formulae/skhd
+
+    # Install Applite
+    echo -n "Need Applite? (y/n) "
+    read REPLY
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        brew install --cask applite
+    fi;
+
+    # Install Raycast
+    echo -n "Need Raycast? (y/n) "
+    read REPLY
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        brew install --cask raycast
+    fi;
+
+    # Install Bartender
+    echo -n "Need Bartender? (y/n) "
+    read REPLY
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        brew install --cask bartender
+    fi;
 
     # Install VS Code
     echo -n "Need Visual Studio Code? (y/n) "
