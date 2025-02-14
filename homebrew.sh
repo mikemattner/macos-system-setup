@@ -28,9 +28,6 @@ function installBrews() {
     brew install --cask font-hack-nerd-font
     brew install --cask font-jetbrains-mono-nerd-font
 
-    # Install alt-tab
-    brew install --cask alt-tab
-
     # Install FastFetch
     brew install fastfetch
 
@@ -42,6 +39,13 @@ function installBrews() {
 
     # Install skhd
     brew install koekeishiya/formulae/skhd
+
+    # Install alt-tab
+    echo -n "Need Alt-Tab? (y/n) "
+    read REPLY
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        brew install --cask alt-tab
+    fi;
 
     # Install Applite
     echo -n "Need Applite? (y/n) "

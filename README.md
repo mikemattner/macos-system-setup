@@ -4,14 +4,20 @@ My system setup in most circumstances
 
 ## Prerequisites
 
-* [Install Xcode Tools](http://railsapps.github.io/xcode-command-line-tools.html)
-* [Install Node.js](https://nodejs.org/en/)
+* Install Xcode Tools ()
+* Install [Node.js](https://nodejs.org/en/)
+* Install [NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
 ## Also, don't forget about
 
-* [Bartender, so I can remove those pesky icons](https://www.macbartender.com/)
-* [Magnet, the window manager](https://itunes.apple.com/us/app/magnet/id441258766?mt=12)
-* [Pliim, for distration free presentations](https://zehfernandes.github.io/pliim/)
+* ⚠️ ~~[Bartender](https://www.macbartender.com/), so I can remove those pesky icons~~
+* Consider [Vanilla](https://matthewpalmer.net/vanilla/), [Ice](https://github.com/jordanbaird/Ice) 🫥, or [Hidden](https://github.com/dwarvesf/hidden) in the future based on the Bartender [acquisition](https://github.com/orgs/Homebrew/discussions/5427).
+* [Magnet](https://itunes.apple.com/us/app/magnet/id441258766?mt=12), the window manager
+* ~~[Pliim](https://zehfernandes.github.io/pliim/), for distraction free presentations~~ No longer free/open source
+* [Tot](https://apps.apple.com/us/app/tot/id1491071483?mt=12), for useful, quick notes
+* [Dato](https://apps.apple.com/us/app/dato/id1470584107?mt=12), for some adjustments to the standard time, date in the menu bar
+* [Boop](https://apps.apple.com/us/app/boop/id1518425043?mt=12), developer tools
+* [DaisyDisk](https://apps.apple.com/us/app/daisydisk/id411643860?mt=12), disk space visualizer
 
 ## Installation
 
