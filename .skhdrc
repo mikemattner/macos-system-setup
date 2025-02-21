@@ -1,4 +1,5 @@
-# opens iTerm2
 cmd + alt - return : open -a 'iTerm'
 cmd + alt - m : open -a 'Sublime Merge'
-fn + alt - s : open -a 'Steam'
+cmd + alt - s : open -a 'Slack'
+cmd + alt - v : open -a 'Visual Studio Code'
+cmd + alt - z : open -a 'zoom.us'
