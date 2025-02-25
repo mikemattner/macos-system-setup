@@ -18,8 +18,9 @@ My system setup in most circumstances
 * [Dato](https://apps.apple.com/us/app/dato/id1470584107?mt=12), for some adjustments to the standard time, date in the menu bar
 * [Boop](https://apps.apple.com/us/app/boop/id1518425043?mt=12), developer tools
 * [DaisyDisk](https://apps.apple.com/us/app/daisydisk/id411643860?mt=12), disk space visualizer
-* [VS Code](https://code.visualstudio.com/)
-* [iTerm2](https://iterm2.com/)
+* [VS Code](https://code.visualstudio.com/), code editor
+* [iTerm2](https://iterm2.com/), terminal emulator
+* [Alcove](https://tryalcove.com/), dynamic island on Macbook
 
 ## Installation
 
