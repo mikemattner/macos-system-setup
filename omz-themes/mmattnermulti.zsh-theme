@@ -70,7 +70,7 @@ function custom_git_prompt() {
 }
 
 # %B sets bold text
-PROMPT='%B╭─%b$PROMPTPREFIX%B⌘ %2~ $(custom_git_prompt)
+PROMPT='%B╭─%b$PROMPTPREFIX%B[%2~] $(custom_git_prompt)
 %B╰─❯%{$RESET%} '
 RPS1="${return_code}"
 
