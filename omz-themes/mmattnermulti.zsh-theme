@@ -13,9 +13,9 @@ silver=$fg[silver]
 RESET=$reset_color
 
 if [ "$USERNAME" = "root" ]; then
-    PROMPTPREFIX="%B◉%{$RESET%} %{$R%}%B⚠ %n%{$RESET%} ";
+    PROMPTPREFIX="%{$R%}%B⚠%{$RESET%} ";
 else
-    PROMPTPREFIX="%B◉%{$RESET%} %{$B%}%B%n%{$RESET%} ";
+    PROMPTPREFIX="%{$B%}%B%{$RESET%} ";
 fi
 
 local return_code="%(?..%{$R%}%? ↵%{$RESET%})"
@@ -70,7 +70,7 @@ function custom_git_prompt() {
 }
 
 # %B sets bold text
-PROMPT='%B╭─%b$PROMPTPREFIX%B[%2~] $(custom_git_prompt)
+PROMPT='%B╭─◉%b$PROMPTPREFIX%B%{$B%}[%2~]%{$RESET%}%B $(custom_git_prompt)
 %B╰─❯%{$RESET%} '
 RPS1="${return_code}"
 
