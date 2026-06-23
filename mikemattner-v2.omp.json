@@ -10,16 +10,7 @@
           "trailing_diamond": "",
           "background": "#242424",
           "foreground": "#FFBB00",
-          "template": "  "
-        },
-        {
-          "type": "text",
-          "style": "powerline",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "background": "#242424",
-          "foreground": "#FFBB00",
-          "template": "<b>{{ .UserName }}</b>@<b>{{ .HostName }}</b> "
+          "template": "  {{ .UserName }} "
         },
         {
           "background": "#021E31",
@@ -59,7 +50,7 @@
             "github_icon": "\uf408 "
           },
           "style": "plain",
-          "template": "{{ if .Working.Changed }}<red> ⚡{{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> \uf046 {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
+          "template": "{{ if .Working.Changed }}<red> ⚡{{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
           "type": "git"
         },
         {
