@@ -1,42 +1,45 @@
 {
   "blocks": [
     {
-      "segments": [
-        {
-          "foreground": "#00C5C7",
-          "options": {
-            "time_format": "15:04:05"
-          },
-          "style": "plain",
-          "template": " {{ .CurrentDate | date .Format }} ",
-          "type": "time"
-        }
-      ],
-      "type": "rprompt"
-    },
-    {
       "alignment": "left",
       "segments": [
         {
+          "foreground": "#FFFFFF",
+          "style": "plain",
+          "template": "--- ",
+          "type": "text"
+        },
+        {
+          "foreground": "#77E4F7",
+          "style": "plain",
+          "template": "[",
+          "type": "text"
+        },
+        {
           "foreground": "#77E4F7",
           "options": {
-            "style": "full"
+            "style": "folder",
+            "max_depth": 2,
+            "hide_root_location": true,
+            "mapped_locations": {
+              "C:\\": "$"
+            }
           },
           "style": "plain",
-          "template": "{{ .Path }} ",
+          "template": "{{ .Path }}",
           "type": "path"
+        },
+        {
+          "foreground": "#77E4F7",
+          "style": "plain",
+          "template": "] ",
+          "type": "text"
         },
         {
           "foreground": "#FFE700",
           "style": "plain",
           "template": "{{ .HEAD }} ",
           "type": "git"
-        },
-        {
-          "foreground": "#43D426",
-          "style": "plain",
-          "template": "\u276f ",
-          "type": "text"
         },
         {
           "foreground": "green",
@@ -52,8 +55,14 @@
             "github_icon": "\uf408 "
           },
           "style": "plain",
-          "template": "{{ if .Working.Changed }}<red> \uf044 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> \uf046 {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
+          "template": "{{ if .Working.Changed }}<red>⚡{{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> \uf046 {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
           "type": "git"
+        },
+        {
+          "foreground": "#FFE700",
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "text"
         }
       ],
       "type": "prompt"
