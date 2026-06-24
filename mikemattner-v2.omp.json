@@ -10,7 +10,7 @@
           "trailing_diamond": "",
           "background": "#242424",
           "foreground": "#FFBB00",
-          "template": "  {{ .UserName }} "
+          "template": "  "
         },
         {
           "background": "#021E31",
