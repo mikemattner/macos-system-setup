@@ -61,12 +61,13 @@
         {
           "foreground": "#FFFFFF",
           "style": "plain",
-          "template": "» ",
+          "template": "»",
           "type": "text"
         }
       ],
       "type": "prompt"
     }
   ],
+  "final_space": true,
   "version": 4
 }

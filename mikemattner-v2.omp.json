@@ -52,17 +52,11 @@
           "style": "plain",
           "template": "{{ if .Working.Changed }}<red> ⚡{{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
           "type": "git"
-        },
-        {
-          "foreground": "#6BC1FA",
-          "style": "plain",
-          "template": " § ",
-          "type": "text"
         }
       ],
-      "final_space": true,
       "type": "prompt"
     }
   ],
+  "final_space": true,
   "version": 4
 }
