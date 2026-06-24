@@ -37,7 +37,8 @@
           "type": "git"
         },
         {
-          "foreground": "#FAAC05",
+          "foreground": "#6F7790",
+          "background": "#16181D",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}red{{ end }}",
@@ -49,8 +50,9 @@
             "fetch_upstream_icon": true,
             "github_icon": "\uf408 "
           },
-          "style": "plain",
-          "template": "{{ if .Working.Changed }}<red> ⚡{{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "template": "{{ if .Working.Changed }}<red> ⚡{{ .Working.String }}</> {{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }}<yellow> {{ .Staging.String }}</> {{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}{{ if gt .Ahead 0 }} \uf062 {{ .Ahead }} <blue>➔</>{{ end }}{{ if gt .Behind 0 }} \uf063 {{ .Behind }}{{ end }}",
           "type": "git"
         }
       ],
