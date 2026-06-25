@@ -1,10 +1,5 @@
 # Directory Navigation Shortcuts
-function docroot     { Set-Location "c:/acculynx" }
-function accuroot    { Set-Location "c:/acculynx/web-dev" }
-function accufront   { Set-Location "c:/acculynx/web-dev/web" }
-function accuadmin   { Set-Location "c:/acculynx/web-dev/adminweb" }
-function portalroot  { Set-Location "c:/acculynx/customerportal" }
-function portalfront { Set-Location "c:/acculynx/customerportal/customer-portal" }
+function docroot     { Set-Location "c:/projects" }
 
 # Easier navigation: .., ..., ...., .....
 function ..          { Set-Location .. }
