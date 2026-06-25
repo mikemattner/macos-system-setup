@@ -50,18 +50,18 @@ esac
 # Override these settings in your ~/.zshrc
 
 # Current working directory
-: ${AGNOSTER_DIR_FG:=${CURRENT_FG}}
-: ${AGNOSTER_DIR_BG:=blue}
+: ${AGNOSTER_DIR_FG:='#6BC1FA'}
+: ${AGNOSTER_DIR_BG:='#021E31'}
 
 # user@host
 : ${AGNOSTER_CONTEXT_FG:=${CURRENT_DEFAULT_FG}}
 : ${AGNOSTER_CONTEXT_BG:=black}
 
 # Git related
-: ${AGNOSTER_GIT_CLEAN_FG:=${CURRENT_FG}}
-: ${AGNOSTER_GIT_CLEAN_BG:=green}
-: ${AGNOSTER_GIT_DIRTY_FG:=black}
-: ${AGNOSTER_GIT_DIRTY_BG:=yellow}
+: ${AGNOSTER_GIT_CLEAN_FG:='#6BC1FA'}
+: ${AGNOSTER_GIT_CLEAN_BG:='#033D63'}
+: ${AGNOSTER_GIT_DIRTY_FG:=red}
+: ${AGNOSTER_GIT_DIRTY_BG:='#16181D'}
 
 # Bazaar related
 : ${AGNOSTER_BZR_CLEAN_FG:=${CURRENT_FG}}
@@ -308,7 +308,7 @@ prompt_dir() {
     # Git repo and inline path enabled, hence only show the git root
     prompt_segment "$AGNOSTER_DIR_BG" "$AGNOSTER_DIR_FG" "$(git_toplevel | sed "s:^$HOME:~:")"
   else
-    prompt_segment "$AGNOSTER_DIR_BG" "$AGNOSTER_DIR_FG" '%~'
+    prompt_segment "$AGNOSTER_DIR_BG" "$AGNOSTER_DIR_FG" '%2~'
   fi
 }
 
@@ -366,7 +366,7 @@ build_prompt() {
   prompt_virtualenv
   prompt_aws
   prompt_terraform
-  prompt_context
+  # prompt_context
   prompt_dir
   prompt_git
   prompt_bzr
