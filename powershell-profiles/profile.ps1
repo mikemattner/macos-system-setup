@@ -1,3 +1,6 @@
+# This get item property alias gets in the way of my git function
+Remove-Item Alias:gp -Force
+
 # Directory Navigation Shortcuts
 function docroot     { Set-Location "c:/projects" }
 
@@ -8,6 +11,7 @@ function ....        { Set-Location ../../.. }
 function .....       { Set-Location ../../../.. }
 
 # Git commands
+function gp          { git push $args }
 function gst         { git status $args }
 function gnb         { git checkout -b $args }
 function gmsg        { git commit -m $args }
